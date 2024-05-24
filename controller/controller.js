@@ -23,9 +23,9 @@ export const paymentverifification= async(req,res)=>{
   const isPayment = razorpay_signature == generated_signature
   if (isPayment)
   {
-    res.redirect(`http://localhost:5173/#paymentsuccess?refrence=${razorpay_order_id}`);
+    res.redirect(`https://payment-integration-frontend.onrender.com/#paymentsuccess?refrence=${razorpay_order_id}`);
   }
   else{
-    res.redirect(`http://localhost:5173/#paymentfail?refrence=${razorpay_order_id}`);
+    res.redirect(`https://payment-integration-frontend.onrender.com/#paymentfail?refrence=${razorpay_order_id}`);
   }
 }
